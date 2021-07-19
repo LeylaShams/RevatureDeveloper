@@ -18,8 +18,7 @@ public class ExampleOne {
 			System.out.print(scanner.nextInt());
 			
 		}
-		scanner.close();
-			
+		scanner.close();	
 
 	}
 
