@@ -10,6 +10,7 @@ public class Main {
 	private static void printRoom() {
 		
 		System.out.println(":::: Current Room :::: ");
+		
 		//will be continued
 
 		
@@ -30,6 +31,17 @@ public class Main {
 		String[] words = phrase.split(" ");
 		
 		/*
+		 * 
+		 * for (Room r: Main.RoomManager.getAllRooms()) {
+			if (r.name.equalsIgnoreCase(name)) {
+			return r
+			
+		}
+		}
+		 * 
+		 * 
+		 * 
+		 * 
 		Scanner scan = new Scanner(System.in);
 		String phrase = scan.nextLine();
 		
@@ -69,7 +81,7 @@ public class Main {
 		//s.printRoom();
 		Main.collectInput();
 		Main.parse(collectInput(), p);
-		//RoomManager roomManager = new RoomManager();
+		RoomManager roomManager = new RoomManager();
 		
 		
 		 
