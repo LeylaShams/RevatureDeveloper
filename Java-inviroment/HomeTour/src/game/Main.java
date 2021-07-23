@@ -10,6 +10,7 @@ public class Main {
 	private static void printRoom() {
 		
 		System.out.println(":::: Current Room :::: ");
+		//will be continued
 
 		
 	}
@@ -24,7 +25,7 @@ public class Main {
 		while (scan.hasNextLine()) {
 			  phrase = scan.nextLine();
 		}
-		scan.close();
+		
 		System.out.println("test");// I know  the problem here, phrase is in block scope, struggling with Scanner class
 		String[] words = phrase.split(" ");
 		
