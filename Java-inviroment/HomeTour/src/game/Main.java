@@ -6,46 +6,32 @@ import fixtures.Room;
 public class Main {
 	
 	public static Room[] rooms = new Room[3];
+	static RoomManager roomManager = new RoomManager();
 	
 	private static void printRoom() {
 		
-		System.out.println(":::: Current Room :::: ");
+		//System.out.println(":::: Current Room :::: ");
+		//System.out.println();
 		
-		//will be continued
+		
+		
 
 		
 	}
 
 	private static String[] collectInput() {
 	
-		System.out.println("You can move around the house in Three direction: ");
-		System.out.println("Please type: 'Go North, South or East' and then hit the enter");
+		//System.out.println("You can move around the house in Three direction: ");
+		//System.out.println("Please type: 'Go North, South or East' and then hit the enter");
 		
 		Scanner scan = new Scanner(System.in);
 		String phrase = scan.nextLine();
+		
+		
 		while (scan.hasNextLine()) {
 			  phrase = scan.nextLine();
 		}
-		
-		System.out.println("test");// I know  the problem here, phrase is in block scope, struggling with Scanner class
 		String[] words = phrase.split(" ");
-		
-		/*
-		 * 
-		 * for (Room r: Main.RoomManager.getAllRooms()) {
-			if (r.name.equalsIgnoreCase(name)) {
-			return r
-			
-		}
-		}
-		 * 
-		 * 
-		 * 
-		 * 
-		Scanner scan = new Scanner(System.in);
-		String phrase = scan.nextLine();
-		
-		String[] words = phrase.split(" "); */
 		scan.close();
 		return words;
 	
@@ -62,6 +48,7 @@ public class Main {
 			switch (words) {
 				case "north":
 					Player.currentRoom = rooms[0];
+					
 					break;
 				case "south":
 					Player.currentRoom = rooms[1];
@@ -75,16 +62,19 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
+		System.out.println("You can move around the house in Three direction: ");
+		System.out.println("Please type: 'Go North, South or East' and then hit the enter");
 		
-		Main s = new Main();
 		Player p = new Player();
-		//s.printRoom();
-		Main.collectInput();
+		
+		roomManager.init();
+		
+		Main.rooms = roomManager.getAllRooms();
+
 		Main.parse(collectInput(), p);
-		RoomManager roomManager = new RoomManager();
-		
-		
-		 
+		Main.printRoom();
+		//System.out.println(s.rooms[1].player.player);
+			 
 		
 	}
 

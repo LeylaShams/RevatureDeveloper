@@ -4,12 +4,15 @@ import game.Player;
 
 public class Room extends Fixture {
 	
-	public Room[] exits = new Room[3];
+	public Room[] exits;
 	
 	public Room(String name, String shortDescription, String longDescription) {
-		super();
 		
-		this.exits = new Room[3]; 
+		
+		this.exits = new Room[3];
+		this.name = name;
+		this.shortDescription = shortDescription;
+		this.longDescription = longDescription;
 	}
 	
 	public Room[] getExits() {
