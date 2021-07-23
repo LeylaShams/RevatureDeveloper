@@ -10,7 +10,7 @@ public class Converter {
 		
 		int menuSelection = 0;
 		
-		while (menuSelection > 4) {
+		while (menuSelection != 4) {
 			
 			if (menuSelection == 1) {
 				System.out.println("1 for converting Cups to Teaspoons.");
