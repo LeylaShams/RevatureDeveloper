@@ -13,10 +13,6 @@ public class Main {
 		//System.out.println(":::: Current Room :::: ");
 		//System.out.println();
 		
-		
-		
-
-		
 	}
 
 	private static String[] collectInput() {
@@ -37,7 +33,6 @@ public class Main {
 	
 	}
 		
-
 	
 	private static void parse(String[] command, Player player) {
 		
@@ -57,7 +52,6 @@ public class Main {
 					Player.currentRoom = rooms[2];			
 		}
 		}
-		
 		
 	
 	public static void main(String[] args) {
