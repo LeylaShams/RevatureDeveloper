@@ -16,27 +16,40 @@ public class Main {
 	}
 
 	private static String[] collectInput() {
-	
-		//System.out.println("You can move around the house in Three direction: ");
-		//System.out.println("Please type: 'Go North, South or East' and then hit the enter");
 		
 		Scanner scan = new Scanner(System.in);
-		String phrase = scan.nextLine();
 		
+		//get input from user
+		System.out.println("Welcome to the Home Tour program!");
+		System.out.println("You can move around the house in Three direction. ");
+		System.out.println("Please type: 'Go North, South or East' and then hit the enter...");
+		String line = scan.nextLine();
+		System.out.println("You have typed " + line);
 		
-		while (scan.hasNextLine()) {
-			  phrase = scan.nextLine();
+		//test if the user is in the right direction!
+		if (wrongDirection(line)) {
+			try {
+				throw new WrongDirectionException();
+			} catch (WrongDirectionException e) {
+				e.printStackTrace();
+			} finally {
+				scan.close();
+	            }  
+	    //close resources
+        scan.close();
 		}
-		String[] words = phrase.split(" ");
-		scan.close();
-		return words;
-	
+        return line.split(" ");
+	}
+	public static boolean wrongDirection(String str) {
+		str = str.toLowerCase();
+		String[] test = str.split(" ");
+		return !(test[1].equals("north") || test[1].equals("south")|| test[1].equals("east"));
 	}
 		
 	
 	private static void parse(String[] command, Player player) {
 		
-		String words = command[0];
+		String words = command[1];
 		words = words.toLowerCase();
 		
 
@@ -51,24 +64,19 @@ public class Main {
 				case "east":
 					Player.currentRoom = rooms[2];			
 		}
-		}
+	}
 		
 	
 	public static void main(String[] args) {
-		
-		System.out.println("You can move around the house in Three direction: ");
-		System.out.println("Please type: 'Go North, South or East' and then hit the enter");
-		
+		//collectInput();
 		Player p = new Player();
 		
 		roomManager.init();
 		
 		Main.rooms = roomManager.getAllRooms();
 
-		Main.parse(collectInput(), p);
-		Main.printRoom();
-		//System.out.println(s.rooms[1].player.player);
-			 
+		parse(collectInput(), p);
+		//Main.printRoom();
 		
 	}
 
