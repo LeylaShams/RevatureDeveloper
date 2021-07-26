@@ -6,8 +6,10 @@ public class Room extends Fixture {
 	
 	public Room(String name, String shortDescription, String 
 			longDescription) {
-}
-	public Room[] exits;
+	}
+	
+
+	public Room[] exits = new Room[3];
 	
 	public String getName() {
         return this.getName();

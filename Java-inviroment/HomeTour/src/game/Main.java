@@ -8,10 +8,14 @@ public class Main {
 	public static Room[] rooms = new Room[3];
 	static RoomManager roomManager = new RoomManager();
 	
-	private static void printRoom() {
-		
-		//System.out.println(":::: Current Room :::: ");
-		//System.out.println();
+	private static void printRoom(Player player) {
+		System.out.println("=================================================");
+		System.out.println(" ::::: Current Room ::::: ");
+		System.out.println("Room: " + player.getCurrentRoom().getName());
+		System.out.println("Short description: " + 
+		player.getCurrentRoom().getShortDescription());
+		System.out.println("Long description: " +
+		player.getCurrentRoom().getLongDescription());
 		
 	}
 
@@ -69,14 +73,14 @@ public class Main {
 	
 	public static void main(String[] args) {
 		//collectInput();
-		Player p = new Player();
+		Player player = new Player();
 		
 		roomManager.init();
 		
 		Main.rooms = roomManager.getAllRooms();
 
-		parse(collectInput(), p);
-		//Main.printRoom();
+		parse(collectInput(), player);
+		//printRoom(player);
 		
 	}
 
