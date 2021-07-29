@@ -1,6 +1,6 @@
 package Day2;
 
-class Calculator2 {
+class Calculator1 {
 	
 	public void test() {
 		System.out.println("1st method");
@@ -27,7 +27,7 @@ public class MethodOverloading {
 
 	public static void main(String[] args) {
 		
-		Calculator2 cal = new Calculator2();
+		Calculator1 cal = new Calculator1();
 		cal.test();
 		cal.test(5);
 		cal.test("blah");

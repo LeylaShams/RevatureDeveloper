@@ -1,6 +1,6 @@
 package Day2;
 
-class test {
+class Test {
 	
 }
 public class Demo5 {
