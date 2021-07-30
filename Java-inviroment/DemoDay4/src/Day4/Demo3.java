@@ -17,7 +17,7 @@ public class Demo3 {
 		// before sorting
 		System.out.println("before sorting...");
 		for(String color: colors) {
-			System.out.println(colors);
+			System.out.println(color);
 		}
 		
 		// after sorting
@@ -36,9 +36,9 @@ public class Demo3 {
 		
 		// before sort
 		System.out.println("before sorting...");
-		for(int num1: numbers) {
-			System.out.println(num1);
-			
+		for(int num: numbers) {
+			System.out.println(num);
+		}	
 		// after sort
 		Collections.sort(numbers);
 		System.out.println("after sorting...");
@@ -48,4 +48,4 @@ public class Demo3 {
 	}
 	}
 
-}
+
