@@ -2,7 +2,7 @@ package Day4;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.HashSet;
-public class Demo10 {
+public class HashSet2 {
 
 	public static void main(String[] args) {
 		

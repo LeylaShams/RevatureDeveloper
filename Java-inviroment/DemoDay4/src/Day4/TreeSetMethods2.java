@@ -20,7 +20,7 @@ public class TreeSetMethods2 {
 	}
 	
     // pollFirst()
-    // PostLast()
+    // PollLast()
 	
 	System.out.println("Highest: " + set.pollLast());
 	System.out.println("Lowest: " + set.pollFirst());
