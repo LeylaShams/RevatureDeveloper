@@ -1,2 +1,2 @@
-# RevatureLabsProjects
-All the Revature assignments here
+Revature Projects!
+
