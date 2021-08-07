@@ -4,23 +4,23 @@ import javax.swing.plaf.nimbus.State;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.List;
+
 
 public class EmployeeDAOImpl implements EmployeeDAO {
 	
 	public static Statement statement = null;
 	Connection connection = null;
 	
-	public EmployeeDAOImpl() {
+	public EmployeeDAOImpl() throws SQLException {
 		try {
 			this.connection = ConnectionFactory.getConnection();
 		} catch (SQLException throwables) {
 			throwables.printStackTrace();
 		}
+		
 	}
 	/*
-	@Override
-	public void createEmployee() throws SQLException {
+	public void createTable() throws SQLException {
 		
 		String sql = "create table employee (id INTEGER PRIMARY KEY AUTO_INCREMENT, name Char(50), email CHAR(50))";
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -30,8 +30,9 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		} else {
 			System.out.println("Oops! something went wrong");
 		}
+	}
+	*/
 	
-	}*/
 
 	@Override
 	public void addEmployee(Employee employee) throws SQLException {
