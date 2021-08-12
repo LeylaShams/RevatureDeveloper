@@ -79,8 +79,8 @@ public class Main {
 	                    System.out.println("Choose between 1 - 6");
 	            }
 	        }
+	        // adding to GitHub
+	        System.out.println("This is the end of the EmployeeDAOImpl");
 	    }
-
-
 
 }
