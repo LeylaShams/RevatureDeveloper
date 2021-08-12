@@ -1,4 +1,7 @@
 package bankApplication;
+// This is an extra file in the Bank Application project. I'm keeping this class her only
+//for personal records. 
+// For the purpose of peer review, you can ignore this file!
 /*
 public class FactoryBancAccounts {
 	
