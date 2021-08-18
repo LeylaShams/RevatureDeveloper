@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+</head>
+<body>
+    <h1 id = "myName"></h1>
+    <h1 id = "myName2"></h1>
+    <script>
+        var firstName = localStorage.getItem('firstName');
+        var lastName = localStorage.lastName;
+        document.getElementById('myName').innerHTML = firstName + ' ' + lastName;
+        //localStorage.clear()
+        localStorage.removeItem('lastName');
+
+        var firstName2 = localStorage.getItem('firstNmae');
+        var lastName2 = localStorage.lastName;
+
+        document.getElementById('myName').innerHTML = firstName2 + ' ' + lastName2;
+    </script>
+</body>
+</html>
+
