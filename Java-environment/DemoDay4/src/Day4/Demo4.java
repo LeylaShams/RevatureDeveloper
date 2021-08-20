@@ -11,6 +11,7 @@ public class Demo4 {
 		names.add("Ali");
 		System.out.println(names.size());
 		System.out.println(names);
+		//System.out.println(29);
 		
 		//for loop
 		for (int i = 0; i < names.size(); i++) {
