@@ -5,14 +5,10 @@ public class EmployeeDAOFactory {
 	private EmployeeDAOFactory() {
 		
 	}
-	public static EmployeeDao getEmployeeDao() {
+	public static EmployeeDao getEmployeeDao() throws ClassNotFoundException {
 		if (dao == null) 
 			dao = new EmployeeDaoImpl();
-			return dao;
-			
+			return dao;	
 	}
-	
-	
-
 }
 	

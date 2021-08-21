@@ -11,7 +11,8 @@ public class ConnectionFactory {
 	private ConnectionFactory() {
 		
 	}
-	public static Connection getConnection() throws SQLException {
+	public static Connection getConnection() throws SQLException, ClassNotFoundException {
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		if (connection == null) {
 			String url = "jdbc:mysql://localhost:3306/revature";
 			String username = "root";

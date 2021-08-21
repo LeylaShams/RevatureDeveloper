@@ -10,7 +10,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	private static Statement statement= null;
 	Connection connection = null;
 	
-	public  EmployeeDaoImpl() {
+	public  EmployeeDaoImpl() throws ClassNotFoundException {
 		try {
 			this.connection = ConnectionFactory.getConnection();
 		}catch (SQLException ex){
@@ -21,7 +21,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 
 	@Override
 	public void addEmployee(Employee employee) throws SQLException {
-		String sql = "insert into Emploee (name, email, gender, country) values (?, ?, ?, ?)";
+		String sql = "insert into employee (name, email, gender, country) values (?, ?, ?, ?)";
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
 		preparedStatement.setString(1, employee.getName());
 		preparedStatement.setString(2, employee.getEmail());

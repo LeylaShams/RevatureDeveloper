@@ -1,25 +1,45 @@
 package com.revature;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+@WebServlet("/addEmployee")
 public class AddEmployeeServlet extends HttpServlet{
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) {
-		response.setContentType("text/html");
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
-		//PrintWriter out = response.getParameter("name");
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
 		
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String gender = request.getParameter("gender");
-		String rational = request.getParameter("country");
+		String country = request.getParameter("country");
 		
 		Employee employee = new Employee();
+		
 		employee.setName(name);
-		employee.setEmail(name);
+		employee.setEmail(email);
 		employee.setGender(gender);
 		employee.setCountry(country);
+		
+		
+		try {
+			EmployeeDao dao = EmployeeDAOFactory.getEmployeeDao();
+			dao.addEmployee(employee);
+			System.out.println("employee record inserted");
+		} catch (SQLException e) {
+			System.out.println("something went wring1");
+			e.printStackTrace();
+		}catch (ClassNotFoundException e1) {
+			System.out.println("something went wring2");
+			e1.printStackTrace();
+		}	
 	}
 
 }

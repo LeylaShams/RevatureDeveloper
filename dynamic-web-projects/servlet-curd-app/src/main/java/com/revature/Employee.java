@@ -66,6 +66,11 @@ public class Employee {
 		this.gender = gender;
 		this.country = country;
 	}
+
+
+	public Employee() {
+		
+	}
 	
 	
 
