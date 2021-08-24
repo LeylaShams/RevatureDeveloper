@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	 <div class="wrapper">
+  <h1>Update employee</h1>
+  <form action="updateservlet" method="GET">
+    <table class="table table-striped">
+      <tr>
+        <td>Enter name</td>
+        <td colspan="2"><input type="text" name="name" placeholder="Name"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Email</td>
+        <td colspan="2"><input type="text" name="email" placeholder="Email" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>Gender</td>
+        <td><input type="radio" name="user_gender" value="male" />Male
+        </td>
+        <td><input type="radio" name="user_gender" value="female" />Female
+        </td>
+      </tr>
+
+      <tr>
+        <td>Country</td>
+        <td colspan="2"><select name="country">
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="UAE">JPN</option>
+          </select></td>
+      </tr>
+
+      <tr>
+        <td colspan="3"><input  type="submit" value="Edit"></td>
+
+      </tr>
+    </table>
+  </form>
+</div>
+</body>
+
+</body>
+</html>

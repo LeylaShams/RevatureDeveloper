@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button onclick = "buttonOn()">On</button>
+    <button onclick = "buttonOff()">Off</button>
+
+    <img id ="img1" src = "off.png" width = "200"/>
+
+    <script>
+        function buttonOn() {
+            document.getElementById("img1").src = "off.png"
+        }
+        function buttonOff() {
+            document.getElementById("img1").src = "on.jpg"
+        }
+    </script>
+
+</body>
+</html>
