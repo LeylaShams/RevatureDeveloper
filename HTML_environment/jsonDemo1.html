@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button onClick = "save()">Save Data</button>
+    <button onClick = "read()">Read Data</button> 
+    <h1 id = "result"></h1>  
+
+    <script>
+        function save() {
+            var fullName = "John";
+            var data = {
+                id: 1,
+                firstName: "Mark",
+                lastName: "Smith",
+                email: "m@gmail.com"
+            }
+            console.log(data.firstName)
+            localStorage.setItem("name", JSON.stringify(data))
+        }
+        function read() {
+            var data = localStorage.getItem('name');
+            console.log(data.firstName);
+            var data2 = JSON.parse(data);
+            document.getElementById('result').innerHTML = data.firstName
+        }
+    </script>
+    
+</body>
+</html>
