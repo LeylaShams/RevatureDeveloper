@@ -4,7 +4,14 @@
 <app-sidebar2></app-sidebar2>
 <app-test></app-test>
 <app-test2-component></app-test2-component>
+<app-employee-list></app-employee-list>
+<!-- <app-test3></app-test3> -->
 
+<!-- <button class = "btn btn-primary">Button</button> -->
 
-
-<button class = "btn btn-primary">Button</button>
+<div class="main">
+    <h1>App Component(Parent)</h1>
+    {{ message }}
+  
+    <app-test3 (childEvent)="message=$event" [childData]="parentData"></app-test3>
+  </div>

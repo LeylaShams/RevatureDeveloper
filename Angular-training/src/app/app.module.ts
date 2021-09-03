@@ -15,7 +15,9 @@ import { Navbar2Component } from './components2/navbar2/navbar2.component';
 import { Header2Component } from './components2/header2/header2.component';
 import { Sidebar2Component } from './components2/sidebar2/sidebar2.component';
 import { TestComponent } from './test/test.component';
-
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import {TitlePipe } from './title.pipe';
+import { Test3Component } from './test3/test3.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +33,10 @@ import { TestComponent } from './test/test.component';
     Navbar2Component,
     Header2Component,
     Sidebar2Component,
-    TestComponent
+    TestComponent,
+    EmployeeListComponent,
+    TitlePipe,
+    Test3Component
     
   ],
   imports: [
