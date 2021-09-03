@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 
 import { AppComponent } from './app.component';
-import { TestComponent } from './test.component';
+
 import { Test2ComponentComponent } from './test2-component/test2-component.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -14,12 +14,13 @@ import { Home2Component } from './home2/home2.component';
 import { Navbar2Component } from './components2/navbar2/navbar2.component';
 import { Header2Component } from './components2/header2/header2.component';
 import { Sidebar2Component } from './components2/sidebar2/sidebar2.component';
-import { MainContemt2Component } from './components2/main-contemt2/main-contemt2.component';
+import { TestComponent } from './test/test.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
+    
     Test2ComponentComponent,
     NavbarComponent,
     HeaderComponent,
@@ -30,7 +31,8 @@ import { MainContemt2Component } from './components2/main-contemt2/main-contemt2
     Navbar2Component,
     Header2Component,
     Sidebar2Component,
-    MainContemt2Component
+    TestComponent
+    
   ],
   imports: [
     BrowserModule

@@ -1,0 +1,25 @@
+<p>test works!</p>
+<h1>Employee List</h1>
+<button class="btn btn-primary btn-block" (click)="onButtonClick()">Toggle view</button>
+<BR>
+<!-- table.table.table-bordered>thead.thead-dark>tr>th*4 -->
+<table class="table table-bordered" *ngIf="flag">
+    <thead class="thead-dark">
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- tbody>tr>td*4 -->
+        <tr *ngFor= "let employee of employees; even as e" [style.background] = "e ? '#ccc' : '#fff'">
+            <td>{{employee.code}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.age}}</td>
+        </tr>
+    </tbody>
+</table>
+

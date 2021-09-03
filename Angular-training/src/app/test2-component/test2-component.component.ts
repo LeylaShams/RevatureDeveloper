@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './test2-component.component.html',
   styleUrls: ['./test2-component.component.css']
 })
-export class Test2ComponentComponent implements OnInit {
+export class Test2ComponentComponent  {
+  name = "Mark Smith"
+  person = {
+    firstName: "Leyla",
+    lastName: "Shams"
+
+  }
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+ 
 
 }
