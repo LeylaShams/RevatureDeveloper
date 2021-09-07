@@ -78,4 +78,11 @@
 			<item key="DIALOG_FONT_NAME" value="1|.SF NS|14.0|0|COCOA|1|.SFNS-Regular"/>
 		</section>
 	</section>
+	<section name="NewPackageWizardPage">
+		<item key="create_package_info_java" value="false"/>
+	</section>
+	<section name="RefactoringWizard.preview">
+		<item key="width" value="600"/>
+		<item key="height" value="400"/>
+	</section>
 </section>
