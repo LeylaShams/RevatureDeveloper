@@ -4,14 +4,15 @@ import { DataService } from '../data.service';
 @Component({
   selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
-  styleUrls: ['./employee-list.component.css']
+  styleUrls: ['./employee-list.component.css'],
+  providers: [DataService]
 })
 export class EmployeeListComponent implements OnInit {
 
   employees: any[] = [];
 
-  constructor() {
-    let dataService = new DataService();
+  constructor(private dataService: DataService) {
+    // let dataService = new DataService();
     this.employees =  dataService.getEmployees()
    }
 
